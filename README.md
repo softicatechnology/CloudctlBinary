@@ -6,15 +6,17 @@ This repository contains the binary release of the CloudCtl CLI tool.
 
 Install the CloudCtl CLI tool by downloading the binary release for your operating system. You can find the latest release on the [Releases]()
 
+The installation script will download the binary release and place it in the `/usr/local/bin` directory and auto create as systemd service and start the service. It needs to run with sudo permission.
+
 To download and run the script with sudo, you can use the following commands:
 
-### Using curl:
+**Using curl:**
 
 ```bash
 curl -sL https://raw.githubusercontent.com/softicatechnology/cloudctl-release/main/install_cloudctl.sh | sudo bash
 ```
 
-### Using wget:
+**Using wget:**
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/softicatechnology/cloudctl-release/main/install_cloudctl.sh | sudo bash
@@ -34,3 +36,9 @@ The CloudCtl CLI tool provides the following commands:
 - `restart-server`: Restart the server process.
 - `list-ports`: List all the ports used by worker containers.
 - `track-workers`: Track the status of worker containers.
+
+**Example:**
+
+```bash
+cloudctl start-docker
+```
